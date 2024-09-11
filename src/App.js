@@ -1,23 +1,31 @@
-import logo from './logo.svg';
+
+import React, {useState} from 'react';
+//import cx from 'classnames';
 import './App.css';
+import List from './Components/List'
+import ToggleSection from './Components/ToggleSection';
+
 
 function App() {
+
+const [likes, setLikes] = useState(100)
+const [dislikes, setDislikes] = useState(25)
+
+const [liked, setLiked] = useState(false)
+const [disliked, setDisliked] = useState(false)
+
+const handleLike = () =>{
+
+  if (liked){
+    setLikes(likes - 1);
+    setLiked(false)
+  }
+
+}
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      <List />
+      <ToggleSection text='hello mama' />
     </div>
   );
 }

@@ -1,0 +1,17 @@
+
+
+.btn-country {
+    display: flex;
+    color: rgb(255, 153, 127);
+    background-color: black;
+    align-items: center;
+    font-size: large;
+    gap: 50px;
+    margin-top: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.btn-country:hover{
+    background-color: rgb(24, 83, 245);
+}
